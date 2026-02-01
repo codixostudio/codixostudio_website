@@ -3,170 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Welcome — Codixo Studio</title>
-  <meta name="description" content="Codixo Studio — design & development studio crafting beautiful, usable web experiences." />
+  <title>Codixo Studio — Design & Development</title>
+  <meta name="description" content="Codixo Studio — design and development studio crafting beautiful, usable web experiences.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg: #f7f9fb;
-      --card: #ffffff;
-      --primary: #2fb0ff; /* friendly blue for the logo */
-      --muted: #667085;
-      --glass: rgba(255,255,255,0.6);
-      --radius: 14px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      background: linear-gradient(180deg,var(--bg),#ffffff);
-      color:#0f172a;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:48px 24px;
-    }
-    .container{
-      width:100%;
-      max-width:1100px;
-      background:var(--card);
-      border-radius:18px;
-      box-shadow:0 10px 30px rgba(20,30,60,0.08);
-      padding:48px;
-      display:flex;
-      gap:36px;
-      align-items:center;
-    }
-    .brand{
-      flex:0 0 320px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .logo-wrap{
-      width:260px;
-      height:260px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:linear-gradient(180deg, rgba(47,176,255,0.12), rgba(47,176,255,0.06));
-      box-shadow: inset 0 -6px 18px rgba(47,176,255,0.06);
-    }
-    .logo{
-      width:140px;
-      height:140px;
-      display:block;
-      object-fit:contain;
-      filter: drop-shadow(0 8px 24px rgba(47,176,255,0.14));
-    }
-    .content{
-      flex:1 1 auto;
-      min-width:260px;
-    }
-    h1{
-      margin:0 0 12px 0;
-      font-size:34px;
-      line-height:1.02;
-      letter-spacing:-0.02em;
-    }
-    p.lead{
-      margin:0 0 20px 0;
-      color:var(--muted);
-      font-size:16px;
-      max-width:58ch;
-    }
-    .cta{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      flex-wrap:wrap;
-      margin-top:18px;
-    }
-    .btn{
-      padding:12px 18px;
-      border-radius:10px;
-      font-weight:600;
-      border:0;
-      cursor:pointer;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      text-decoration:none;
-    }
-    .btn-primary{
-      background:linear-gradient(90deg,var(--primary),#00a0ff);
-      color:white;
-      box-shadow:0 8px 24px rgba(47,176,255,0.14);
-    }
-    .btn-ghost{
-      background:transparent;
-      color:var(--muted);
-      border:1px solid rgba(15,23,42,0.06);
-    }
-    .features{
-      display:flex;
-      gap:14px;
-      margin-top:24px;
-      flex-wrap:wrap;
-    }
-    .feature{
-      background:var(--glass);
-      padding:12px 14px;
-      border-radius:10px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    footer{
-      margin-top:18px;
-      color:var(--muted);
-      font-size:13px;
-    }
-    @media (max-width:880px){
-      .container{flex-direction:column; padding:28px;}
-      .brand{order:0}
-      .logo-wrap{width:160px;height:160px}
-      .logo{width:90px;height:90px}
-      h1{font-size:26px}
-    }
+    :root{ --bg:#f7fafc; --text:#0f172a; --muted:#475569; --accent:#2fb0ff; }
+    *{box-sizing:border-box}
+    body{ font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; color:var(--text); background:var(--bg); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale }
+    header{ background:#fff; border-bottom:1px solid rgba(15,23,42,0.04) }
+    .wrap{ max-width:1100px; margin:0 auto; padding:28px 20px }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px }
+    .brand{ display:flex; align-items:center; gap:12px }
+    .brand img{ width:44px; height:44px; display:block }
+    nav a{ color:var(--muted); text-decoration:none; margin-left:14px; font-weight:600 }
+    .hero{ display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:center; padding:48px 0 }
+    .hero h1{ font-size:42px; margin:0 0 12px }
+    .lead{ color:var(--muted); margin:0 0 18px; max-width:60ch }
+    .btn{ display:inline-block; padding:12px 18px; border-radius:10px; font-weight:700; text-decoration:none }
+    .btn-primary{ background:linear-gradient(90deg,var(--accent),#00a0ff); color:#fff }
+    .card{ background:#fff; border-radius:12px; padding:18px; box-shadow:0 8px 30px rgba(15,23,42,0.06) }
+    .grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:28px }
+    .project{ background:#fff; padding:14px; border-radius:10px; box-shadow:0 6px 20px rgba(2,6,23,0.04) }
+    section{ padding:40px 0 }
+    footer{ text-align:center; color:var(--muted); padding:24px 0 }
+    @media (max-width:900px){ .hero{ grid-template-columns:1fr; } .grid{ grid-template-columns:repeat(2,1fr) } }
+    @media (max-width:520px){ .grid{ grid-template-columns:1fr } .nav{ flex-direction:column; align-items:flex-start } }
   </style>
 </head>
 <body>
-  <main class="container" role="main">
-    <div class="brand">
-      <div class="logo-wrap">
-        <!-- Replace the src with your real logo path: /assets/logo.png -->
-        <img class="logo" src="logo.png" alt="Codixo Studio logo" width="140" height="140" loading="eager" />
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="logo.png" alt="Codixo Studio logo" width="44" height="44">
+        <strong>Codixo Studio</strong>
       </div>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <section class="content">
-      <h1>Welcome to Codixo Studio</h1>
-      <p class="lead">We design and build elegant, high-performance digital products — web apps, brand experiences, and tooling that move businesses forward. Fast iterations, human-centered design, and clean engineering are at the heart of what we do.</p>
-
-      <div class="cta" role="group" aria-label="Primary actions">
-        <a class="btn btn-primary" href="/projects">Get started
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="transform:translateY(1px)">
-            <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-        <a class="btn btn-ghost" href="/contact">Contact us</a>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>We craft beautiful, fast web experiences</h1>
+        <p class="lead">Codixo Studio is a small team of designers and engineers building accessible, high-performance web products and brands for startups and enterprises.</p>
+        <p>
+          <a class="btn btn-primary" href="#projects">See our work</a>
+          <a class="btn" href="#contact" style="margin-left:12px">Get in touch</a>
+        </p>
+        <div class="grid" style="margin-top:22px">
+          <div class="card">UI & Product Design</div>
+          <div class="card">Web & Mobile Development</div>
+          <div class="card">Branding & Identity</div>
+        </div>
       </div>
-
-      <div class="features">
-        <div class="feature">UI & Product Design</div>
-        <div class="feature">Web & Mobile Development</div>
-        <div class="feature">Branding & Identity</div>
-        <div class="feature">Consulting & Strategy</div>
+      <div>
+        <div class="card" style="text-align:center">
+          <img src="logo.png" alt="Codixo Studio" style="width:160px;height:160px;object-fit:contain;margin:0 auto 12px;display:block">
+          <div style="font-weight:600">Small team. Big impact.</div>
+          <div style="color:var(--muted);margin-top:6px">We ship design systems, complex apps, and brand identity work.</div>
+        </div>
       </div>
-
-      <footer>
-        Need help? <a href="/contact">Get in touch</a> or explore our <a href="/projects">portfolio</a>.
-      </footer>
     </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <p class="lead">We partner with product teams to design, build and launch meaningful products.</p>
+      <div class="grid" style="margin-top:18px">
+        <div class="project">Product Design</div>
+        <div class="project">Frontend & Backend Engineering</div>
+        <div class="project">Branding</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected projects</h2>
+      <div class="grid" style="margin-top:18px">
+        <div class="project"><strong>Project One</strong><div style="color:var(--muted);margin-top:6px">A modern web app for e-commerce.</div></div>
+        <div class="project"><strong>Project Two</strong><div style="color:var(--muted);margin-top:6px">Brand and design system for a SaaS product.</div></div>
+        <div class="project"><strong>Project Three</strong><div style="color:var(--muted);margin-top:6px">Mobile-first marketplace experience.</div></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="lead">Want to work together? Email us or send a quick note below.</p>
+      <p style="margin-top:12px"><a class="btn btn-primary" href="mailto:hello@codixo.studio">hello@codixo.studio</a></p>
+      <form onsubmit="return mailtoSend(this)" style="margin-top:18px;max-width:540px">
+        <label style="display:block">Name <input name="name" required style="width:100%;margin-top:6px;padding:10px;border:1px solid #e6eef7;border-radius:8px"></label>
+        <label style="display:block;margin-top:10px">Email <input name="email" type="email" required style="width:100%;margin-top:6px;padding:10px;border:1px solid #e6eef7;border-radius:8px"></label>
+        <label style="display:block;margin-top:10px">Message <textarea name="message" rows="6" required style="width:100%;margin-top:6px;padding:10px;border:1px solid #e6eef7;border-radius:8px"></textarea></label>
+        <div style="margin-top:12px"><button class="btn btn-primary" type="submit">Send message</button></div>
+        <div id="formStatus" style="margin-top:8px;color:green;display:none">Message prepared. Your mail client will open.</div>
+      </form>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Codixo Studio — crafted with care.</div>
+    </footer>
   </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function mailtoSend(form){
+      var name = encodeURIComponent(form.name.value || '');
+      var email = encodeURIComponent(form.email.value || '');
+      var message = encodeURIComponent(form.message.value || '');
+      var subject = encodeURIComponent('Website contact from ' + (name || email));
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      window.location.href = 'mailto:hello@codixo.studio?subject=' + subject + '&body=' + body;
+      document.getElementById('formStatus').style.display = 'block';
+      return false;
+    }
+  </script>
 </body>
 </html>
