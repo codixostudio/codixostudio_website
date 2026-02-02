@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="gr" x1="0" x2="1">
+      <stop offset="0" stop-color="#2fb0ff"/>
+      <stop offset="1" stop-color="#6a8cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#gr)"/>
+  <g transform="translate(72,72)">
+    <rect width="1056" height="486" rx="18" fill="#fff" opacity="0.96" />
+    <image href="/images/rental-system.svg" x="48" y="48" width="480" height="300" preserveAspectRatio="xMidYMid meet"/>
+    <text x="560" y="160" font-family="Poppins, Inter, sans-serif" font-size="48" font-weight="700" fill="#071022">Rental System</text>
+    <text x="560" y="216" font-family="Inter, sans-serif" font-size="20" fill="#334155">Complete rental management: bookings, payments, calendar, admin dashboard.</text>
+  </g>
+</svg>

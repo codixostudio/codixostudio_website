@@ -1,0 +1,10 @@
+{
+  "name": "codixostudio-website",
+  "version": "1.0.0",
+  "scripts": {
+    "generate-og": "node scripts/generate-og-images.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.32.0"
+  }
+}
