@@ -19,7 +19,7 @@ if(menuToggle){
   });
   // Close mobile nav after clicking a link
   mainNav && mainNav.addEventListener('click', function(e){
-    if(e.target.tagName === 'A' && window.innerWidth <= 560){
+    if(e.target.tagName === 'A' && window.innerWidth <= 768){
       mainNav.style.display = '';
       menuToggle.setAttribute('aria-expanded', 'false');
     }
